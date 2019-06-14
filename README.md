@@ -119,7 +119,14 @@ dataFromQueue = process.getFromQueue()
 valueL = dataFromQueue[0] #The first in the list is the left audio peak. A float from 0.0 to 1.0
 valueR = dataFromQueue[1] #The second in the list is the right audio peak. A float from 0.0 to 1.0
 ```
-
+To see debugging output on the terminal use
+```
+process = RFFT.PeakTask(frames_per_buffer=1024, debug=True, fps=False)
+```
+To print the FPS count every second use
+```
+process = RFFT.PeakTask(frames_per_buffer=1024, debug=False, fps=True)
+```
 
 
 ## Deployment
