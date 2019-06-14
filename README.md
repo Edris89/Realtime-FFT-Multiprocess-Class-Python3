@@ -19,14 +19,11 @@ You will need to install pulseaudio server or pulseaudio volume control GUI. You
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installing](#installing)
-  - [Running the audioPeakExample](#running-the-audiopeakexample)
-  - [Using the class in your own custom script](#using-the-class-in-your-own-custom-script)
+    - [Running the audioPeakExample](#running-the-audiopeakexample)
+    - [Using the class in your own custom script](#using-the-class-in-your-own-custom-script)
   - [Versioning](#versioning)
   - [Authors](#authors)
   - [License](#license)
-
-
-
 
 
 
@@ -89,7 +86,7 @@ cd Realtime-FFT-Multiprocess-Class-Python3
 Step 3: Done! 
 We can now make our own script and use the class or use the audioPeakExample.py that is provided.
 
-## Running the audioPeakExample
+### Running the audioPeakExample
 
 Step 1: Cd into examples
 ```
@@ -108,7 +105,7 @@ valueL:[0.363205]	valueR:[0.426743]
 **To exit the script use Ctr+C this ensures that the spawned child process will properly shutdown**
 
 
-## Using the class in your own custom script
+### Using the class in your own custom script
 
 Important!: Copy examples/RFFT.py to the location where your script is before using it otherwise it can not import it and you will get a error.
 
