@@ -39,7 +39,7 @@ To install pulseaudio volume control.
 sudo apt install pavucontrol
 ```
 
-For more information visit https://linuxhint.com/pulse_audio_sounds_ubuntu/
+For more information visit [Pulse Audio Ubuntu](https://linuxhint.com/pulse_audio_sounds_ubuntu/)
 
 Library's that are used by the class. You must install the following.
 
