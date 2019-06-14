@@ -104,11 +104,11 @@ Initialize the class for the peak audio. For now this is the only Task supported
 process = RFFT.PeakTask(frames_per_buffer=1024, debug=False, fps=False)
 ```
 
-To start the process/rfft use
+To start the process use
 ```
 process.start()
 ```
-To stop the process/rfft use
+To stop the process use
 ```
 process.shutdown()
 ```
