@@ -1,7 +1,5 @@
 # Realtime-FFT-Multiprocess-Class-Python3
 
-Realtime Fast Fourier Transform Multiprocess Class for Python 3
-
 This library taps into the pulseaudio PC audio stream to do FFT on.
 
 
