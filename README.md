@@ -1,6 +1,12 @@
 # Realtime-FFT-Multiprocess-Class-Python3
 
-This library taps into the pulseaudio PC audio stream to do FFT on.
+This library taps into the pulseaudio PC audio stream to do FFT on. It spawns a new process and uses a Queue to talk with the parent process.
+
+
+**Caution before going further !**
+
+I cannot guarantee that this will not break some of your sound settings.
+The class uses pyaudio to tap into the pc audio stream.
 
 
 ## Getting Started 
