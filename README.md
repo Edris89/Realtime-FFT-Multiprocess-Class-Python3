@@ -52,7 +52,6 @@ pip3 install numpy
 ### Installing
 
 Make sure you installed the prerequisites before going further
-Do the following
 
 
 Step 1: Clone this repository
