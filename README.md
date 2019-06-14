@@ -15,7 +15,7 @@ You will need to install pulseaudio server or pulseaudio volume control GUI. You
 ### Prerequisites
 
 The program is reading the audio buffer from pulseaudio
-Althoug the normal soundserver is ALSA on Ubuntu, I went for the pulseaudio for easy access to the audio stream
+althoug the normal soundserver is ALSA on Ubuntu, I went for the pulseaudio for easy access to the audio stream
 
 There are 2 options to use pulseaudio
 1 is without the GUI
