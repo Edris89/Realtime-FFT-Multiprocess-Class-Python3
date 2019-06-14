@@ -12,8 +12,8 @@ The program is reading the audio buffer from pulseaudio
 Althoug the normal soundserver is ALSA on Ubuntu, I went for the pulseaudio for easy access to the audio stream
 
 There are 2 options to use pulseaudio
-One is without the GUI
-One is with a GUI
+1 is without the GUI
+1 is with a GUI
 
 I cannot guarantee that this will not break some of your sound settings. I am using Ubuntu 19.04 and the GUI version.
 
