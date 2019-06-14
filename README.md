@@ -90,6 +90,38 @@ valueL:[0.363205]	valueR:[0.426743]
 **To exit the script use Ctr+C this ensures that the spawned child process will properly shutdown**
 
 
+## Using the class in your own custom script
+
+Important!: Copy examples/RFFT.py to the location where your script is before using it otherwise it can not import it and you will get a error.
+
+Assuming you have copied the example/RFFT.py to the location where your script is. Import RFFT
+```
+import RFFT
+```
+
+Initialize the class for the peak audio. For now this is the only Task supported.
+```
+process = RFFT.PeakTask(frames_per_buffer=1024, debug=False, fps=False)
+```
+
+To start the process/rfft use
+```
+process.start()
+```
+To stop the process/rfft use
+```
+process.shutdown()
+```
+To get values from the process Queue use
+```
+#This returns a list [leftPeak, rightPeak]
+dataFromQueue = process.getFromQueue()
+valueL = dataFromQueue[0] #The first in the list is the left audio peak. A float from 0.0 to 1.0
+valueR = dataFromQueue[1] #The second in the list is the right audio peak. A float from 0.0 to 1.0
+```
+
+
+
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
