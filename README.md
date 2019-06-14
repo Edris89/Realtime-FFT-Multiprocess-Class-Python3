@@ -1,8 +1,9 @@
 # Realtime-FFT-Multiprocess-Class-Python3
 
+***The library is in Alpha phase and only tested on Ubuntu 19.04 with Python 3.7.3***
+
 This library taps into the pulseaudio PC audio stream to do Realtime FFT on. It spawns a new process and uses a Queue to talk with the parent process.
 
-The library is in Alpha phase and only tested on Ubuntu 19.04 with Python 3.7.3
 
 
 **Caution before going further !**
