@@ -24,14 +24,14 @@ There are 2 options to use pulseaudio
 **I cannot guarantee that this will not break some of your sound settings.** I am using Ubuntu 19.04 and the GUI version.
 
 You have to install one of the following packages!
-To install pulseaudio server 
+To install pulseaudio server .
 ```
 sudo apt update
 sudo apt upgrade
 sudo apt install pulseaudio
 ```
 
-To install pulseaudio volume control
+To install pulseaudio volume control.
 ```
 sudo apt install pavucontrol
 ```
@@ -51,7 +51,7 @@ pip3 install numpy
 
 ### Installing
 
-Make sure you installed the prerequisites before going further
+Make sure you installed the prerequisites before going further.
 
 
 Step 1: Clone this repository
@@ -66,7 +66,7 @@ cd Realtime-FFT-Multiprocess-Class-Python3
 ```
 
 Step 3: Done! 
-We can now make our own script and use the class or use a the audioPeakExample.py that is provided.
+We can now make our own script and use the class or use the audioPeakExample.py that is provided.
 
 ## Running the audioPeakExample
 
