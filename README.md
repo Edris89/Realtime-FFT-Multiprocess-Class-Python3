@@ -23,6 +23,8 @@ I cannot guarantee that this will not break some of your sound settings. I am us
 You have to install one of the following packages!
 To install pulseaudio server 
 ```
+sudo apt update
+sudo apt upgrade
 sudo apt install pulseaudio
 ```
 
