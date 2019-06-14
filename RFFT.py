@@ -17,7 +17,6 @@ class PeakTask(multiprocessing.Process):
         multiprocessing.Process.__init__(self)
         self.exitProcess = multiprocessing.Event()
         print("Starting FFT Task")
-
         
         self.frames_per_buffer = frames_per_buffer
         self.maxValue = 2**16
@@ -29,7 +28,6 @@ class PeakTask(multiprocessing.Process):
         #Boolean Settings
         self.debug = debug
         self.fps = fps
-
 
     def run(self):
         p=pyaudio.PyAudio()
@@ -52,13 +50,10 @@ class PeakTask(multiprocessing.Process):
                 
                 self.queue.put([peakL,peakR])
 
-
-
                 if(self.debug):
                     lString = "#"*int(peakL*self.bars)+"-"*int(self.bars-peakL*self.bars)
                     rString = "#"*int(peakR*self.bars)+"-"*int(self.bars-peakR*self.bars)
                     print("L=[%s]\tpeakL=[%f]\tpeakR=[%f]\tR=[%s]"%(lString, peakL , peakR ,rString))
-                
                 
                 if(self.fps):
                     counter+=1
@@ -80,7 +75,6 @@ class PeakTask(multiprocessing.Process):
     def shutdown(self):
         self.exitProcess.set()
         print("Shutdown initiated")
-
     
     def getFromQueue(self):
         return self.queue.get()
