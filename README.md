@@ -12,6 +12,24 @@ I cannot guarantee that this will not break some of your sound settings.
 The class uses pyaudio to tap into the pc audio stream.
 You will need to install pulseaudio server or pulseaudio volume control GUI. You can find more information how to install below
 
+## Table of Contents
+
+- [Realtime-FFT-Multiprocess-Class-Python3](#realtime-fft-multiprocess-class-python3)
+  - [Table of Contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installing](#installing)
+  - [Running the audioPeakExample](#running-the-audiopeakexample)
+  - [Using the class in your own custom script](#using-the-class-in-your-own-custom-script)
+  - [Versioning](#versioning)
+  - [Authors](#authors)
+  - [License](#license)
+
+
+
+
+
+
 ## Getting Started 
 
 
