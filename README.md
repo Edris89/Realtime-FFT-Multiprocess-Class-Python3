@@ -7,7 +7,7 @@ This library taps into the pulseaudio PC audio stream to do Realtime FFT on. It 
 
 I cannot guarantee that this will not break some of your sound settings.
 The class uses pyaudio to tap into the pc audio stream.
-
+You will need to install pulseaudio server or pulseaudio volume control GUI. You can find more information how to install below
 
 ## Getting Started 
 
