@@ -5,13 +5,35 @@ Realtime Fast Fourier Transform Multiprocess Class for Python 3
 
 
 
-## Getting Startedasdf
+## Getting Started 
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-Library's that are used by the class, to install use the following.
+The program is reading the audio buffer from pulseaudio
+Althoug the normal soundserver is ALSA on Ubuntu, I went for the pulseaudio for easy access to the audio stream
+
+There are 2 options to use pulseaudio
+One is without the GUI
+One is with a GUI
+
+I cannot guarantee that this will not break some of your sound settings. I am using Ubuntu 19.04 and the GUI version.
+
+You have to install one of the following packages!
+To install pulseaudio server 
+```
+sudo apt install pulseaudio
+```
+
+To install pulseaudio volume control
+```
+sudo apt install pavucontrol
+```
+
+For more information visit https://linuxhint.com/pulse_audio_sounds_ubuntu/
+
+Library's that are used by the class. To install, use the following.
 
 ```
 sudo apt update
@@ -23,8 +45,6 @@ pip3 install numpy
 ```
 
 ### Installing
-
-To use the class git clone this repository
 
 Do the following
 
@@ -41,27 +61,20 @@ cd Realtime-FFT-Multiprocess-Class-Python3
 ```
 
 Step 3: Done! 
-We can now make a our own script and use the class or use a the audioPeakExample.py that is provided.
+We can now make our own script and use the class or use a the audioPeakExample.py that is provided.
 
-## Running the tests
+## Running the audioPeakExample
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+Step 1: Cd into examples
 ```
-Give an example
+cd examples
+```
+Step 2: execute the python3 audioPeakExample script
+```
+python3 audioPeakExample.py
 ```
 
-### And coding style tests
 
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
