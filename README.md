@@ -16,6 +16,7 @@ You will need to install pulseaudio server or pulseaudio volume control GUI. You
 
 - [Realtime-FFT-Multiprocess-Class-Python3](#realtime-fft-multiprocess-class-python3)
   - [Table of Contents](#table-of-contents)
+  - [Methods](#methods)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installing](#installing)
@@ -26,6 +27,12 @@ You will need to install pulseaudio server or pulseaudio volume control GUI. You
   - [License](#license)
 
 
+## Methods
+
+The library is still in development and for now it only has 1 Task
+* PeakTask (This will calculate the peak average of the left and right channel pc audio stream.)
+
+More methods will come in the furter.
 
 ## Getting Started 
 
