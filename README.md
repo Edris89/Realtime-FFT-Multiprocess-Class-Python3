@@ -38,7 +38,7 @@ sudo apt install pavucontrol
 
 For more information visit https://linuxhint.com/pulse_audio_sounds_ubuntu/
 
-Library's that are used by the class. To install, use the following.
+Library's that are used by the class. You must install the following.
 
 ```
 sudo apt update
