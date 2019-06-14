@@ -78,7 +78,7 @@ If all went good you should see the following printout in the terminal
 valueL:[0.363205]	valueR:[0.426743]
 ```
 
-**To exit the script use Ctr+C this ensure that the spawned child process will properly shutdown**
+**To exit the script use Ctr+C this ensures that the spawned child process will properly shutdown**
 
 
 ## Deployment
