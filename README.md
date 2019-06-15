@@ -202,12 +202,7 @@ Stop PeakTask Route
 ```
 http://localhost:5000/stopPeakTask
 ```
-Get PeakTask Data peak audio left and right returns a list with floats **NOT WORKING UNDER DEV**
-```
-http://localhost:5000/getPeakTaskValues
 
-#This will look like >> [0.2752227783203125, 0.27825927734375]
-```
 
 
 
