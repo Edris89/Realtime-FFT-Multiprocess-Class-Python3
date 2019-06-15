@@ -26,7 +26,7 @@ You will need to install pulseaudio server or pulseaudio volume control GUI. You
     - [Prerequisites](#prerequisites-1)
     - [How to use basic methods](#how-to-use-basic-methods)
     - [API Routes](#api-routes)
-      - [PeakTask Route](#peaktask-route)
+      - [PeakTask Routes](#peaktask-routes)
   - [Versioning](#versioning)
   - [Authors](#authors)
   - [License](#license)
@@ -193,7 +193,7 @@ apiServerProcess.shutdown()
 ```
 ### API Routes
 
-#### PeakTask Route
+#### PeakTask Routes
 Start PeakTask Route
 ```
 http://localhost:5000/startPeakTask
@@ -201,6 +201,12 @@ http://localhost:5000/startPeakTask
 Stop PeakTask Route
 ```
 http://localhost:5000/stopPeakTask
+```
+Get PeakTask Data peak audio left and right returns a list with floats
+```
+http://localhost:5000/getPeakTaskValues
+
+#This will look like >> [0.2752227783203125, 0.27825927734375]
 ```
 
 
