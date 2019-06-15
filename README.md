@@ -34,7 +34,7 @@ The library is still in development and for now it only has 1 Task
 
 More methods will come in the future.
 In development:
-* HTTP API (Spawns a server that will listen to http requests, all methods will have support)
+* HTTP API (Spawns a flask server that will listen to http requests, all methods will have support)
 ## Getting Started 
 
 
