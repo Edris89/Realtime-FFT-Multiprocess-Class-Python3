@@ -33,7 +33,8 @@ The library is still in development and for now it only has 1 Task
 * PeakTask (This will calculate the peak of the left and right channels pc audio stream.)
 
 More methods will come in the future.
-
+In development:
+* HTTP API (Spawns a server that will listen to http requests, all methods will have support)
 ## Getting Started 
 
 
