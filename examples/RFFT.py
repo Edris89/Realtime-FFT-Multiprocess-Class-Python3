@@ -90,13 +90,19 @@ class APITask(multiprocessing.Process):
         self.exitProcess = multiprocessing.Event()
         print("Starting API Server")
         
+        self.debug = debug
+        self.host = host
+        self.port = port
+
         #Boolean for states
         self.wasProcessStarted = False
+
+
         self.app = Flask(__name__)
         self.startPeakTaskRoute()
         self.stopPeakTaskRoute()
 
-        self.app.run(debug=debug, host=host, port=port)
+        self.app.run(debug=self.debug, host=self.host, port=self.port)
         
     
     def startPeakTaskRoute(self):

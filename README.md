@@ -176,15 +176,10 @@ script import RFFT
 import RFFT
 ```
 To initialize the class, see the following examples
+You must provide debug, host and port otherwise it won't start the process.
 ```
-#For using debugging and a local ip address with a port
 apiServerProcess = RFFT.APITask(debug=True, host="192.168.178.24", port=5000)
 
-#Flask server api will automaticly use localhost and port 5000
-apiServerProcess = RFFT.APITask()
-
-#Flask server api will automaticly use localhost and port 5000 and debugging on
-apiServerProcess = RFFT.APITask(debug=True)
 ```
 
 To start the API Process
