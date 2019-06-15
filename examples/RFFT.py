@@ -21,7 +21,7 @@ class PeakTask(multiprocessing.Process):
         self.frames_per_buffer = frames_per_buffer
         self.maxValue = 2**16
         self.bars = 35
-        
+
         #Multiprocess Queue
         self.queue = Queue()
 
@@ -85,7 +85,7 @@ class PeakTask(multiprocessing.Process):
 
 class PeakAPITask(multiprocessing.Process):
     
-    def __init__(self,frames_per_buffer, debug, fps, queue):
+    def __init__(self,frames_per_buffer, debug, fps):
         multiprocessing.Process.__init__(self)
         self.exitProcess = multiprocessing.Event()
         print("Starting FFT Task")
@@ -95,7 +95,7 @@ class PeakAPITask(multiprocessing.Process):
         self.bars = 35
 
         #Multiprocess Queue
-        self.queue = queue
+        self.queue = Queue()
 
         #Boolean Settings
         self.debug = debug
@@ -160,9 +160,6 @@ class APITask(multiprocessing.Process):
         multiprocessing.Process.__init__(self)
         self.exitProcess = multiprocessing.Event()
         print("Starting API Server")
-
-        #Queue
-        self.queue = Queue()
         
         self.debug = debug
         self.host = host
@@ -185,7 +182,7 @@ class APITask(multiprocessing.Process):
         def startPeakTask():
             
             if(self.wasPeakTaskProcessStarted == False):
-                self.peakTaskProcess = PeakAPITask(frames_per_buffer=1024, debug=False, fps=False, queue=self.queue)
+                self.peakTaskProcess = PeakAPITask(frames_per_buffer=1024, debug=False, fps=False)
                 self.peakTaskProcess.start()
                 self.wasPeakTaskProcessStarted = True
                 return 'PeakTask Started !'
@@ -207,7 +204,7 @@ class APITask(multiprocessing.Process):
         @self.app.route('/getPeakTaskValues', methods=["GET"])
         def getPeakValues():
             if(self.wasPeakTaskProcessStarted == True):
-                dataFromTheQueue = self.queue.get()
+                dataFromTheQueue = self.peakTaskProcess.getFromQueue()
                 return str(dataFromTheQueue)
 
             else: 
