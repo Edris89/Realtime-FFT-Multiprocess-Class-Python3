@@ -175,7 +175,8 @@ script import RFFT
 ```
 import RFFT
 ```
-To initialize the class, see the following examples
+To initialize the class, see the following example
+
 You must provide debug, host and port otherwise it won't start the process.
 ```
 apiServerProcess = RFFT.APITask(debug=True, host="192.168.178.24", port=5000)
