@@ -22,6 +22,11 @@ You will need to install pulseaudio server or pulseaudio volume control GUI. You
     - [Installing](#installing)
     - [Running the audioPeakExample](#running-the-audiopeakexample)
     - [Using the class in your own custom script](#using-the-class-in-your-own-custom-script)
+  - [HTTP API](#http-api)
+    - [Prerequisites](#prerequisites-1)
+    - [How to use basic methods](#how-to-use-basic-methods)
+    - [API Routes](#api-routes)
+      - [PeakTask Route](#peaktask-route)
   - [Versioning](#versioning)
   - [Authors](#authors)
   - [License](#license)
@@ -32,7 +37,7 @@ You will need to install pulseaudio server or pulseaudio volume control GUI. You
 The library is still in development and for now it only has 1 Task
 * PeakTask (This will calculate the peak of the left and right channels pc audio stream.)
 
-More methods will come in the future.
+
 In development:
 * HTTP API (Spawns a flask server that will listen to http requests, all methods will have support)
 ## Getting Started 
@@ -149,6 +154,50 @@ process = RFFT.PeakTask(frames_per_buffer=1024, debug=True, fps=False)
 To print the FPS count every second use
 ```
 process = RFFT.PeakTask(frames_per_buffer=1024, debug=False, fps=True)
+```
+
+## HTTP API 
+
+### Prerequisites
+
+For this to work you will need the Flask package
+Flask is a microframework for Python based on Werkzeug, Jinja 2.
+For more information visis their [Flask Website](http://flask.pocoo.org/)
+
+You can install Flask by the following command
+```
+pip3 install Flask
+```
+### How to use basic methods
+
+First copy the examples/RFFT.py to where your script is located then in your 
+script import RFFT
+```
+import RFFT
+```
+To initialize the class, you must provide 
+```
+apiServerProcess = RFFT.APITask(debug=True, host="192.168.178.24", port=5000)
+```
+
+To start the API Process
+```
+apiServerProcess.start()
+```
+To stop the API Process
+```
+apiServerProcess.shutdown()
+```
+### API Routes
+
+#### PeakTask Route
+Start PeakTask Route
+```
+http://localhost:5000/startPeakTask
+```
+Stop PeakTask Route
+```
+http://localhost:5000/stopPeakTask
 ```
 
 

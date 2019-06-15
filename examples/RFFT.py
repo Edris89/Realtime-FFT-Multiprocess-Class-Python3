@@ -78,3 +78,54 @@ class PeakTask(multiprocessing.Process):
     
     def getFromQueue(self):
         return self.queue.get()
+
+
+
+
+class APITask(multiprocessing.Process):
+
+    def __init__(self, debug, host, port):
+        from flask import Flask
+        multiprocessing.Process.__init__(self)
+        self.exitProcess = multiprocessing.Event()
+        print("Starting API Server")
+        
+        #Boolean for states
+        self.wasProcessStarted = False
+        self.app = Flask(__name__)
+        self.startPeakTaskRoute()
+        self.stopPeakTaskRoute()
+
+        self.app.run(debug=debug, host=host, port=port)
+        
+    
+    def startPeakTaskRoute(self):
+        @self.app.route('/startPeakTask', methods=["GET"])
+        def startPeakTask():
+            
+            if(self.wasProcessStarted == False):
+                self.peakTaskProcess = PeakTask(frames_per_buffer=1024, debug=True, fps=False)
+                self.peakTaskProcess.start()
+                self.wasProcessStarted = True
+                return 'PeakTask Started !'
+            else:
+                return "PeakTask already running!"
+
+    def stopPeakTaskRoute(self):
+        @self.app.route('/stopPeakTask', methods=["GET"])
+        def stopPeakTask():
+
+            if(self.wasProcessStarted == True):
+                self.peakTaskProcess.shutdown()
+                self.wasProcessStarted = False
+                return 'PeakTask! Stopped'
+            else:
+                return "PeakTask is not Running"
+        
+    def shutdown(self):
+        self.exitProcess.set()
+        print("Server API Shutdown initiated")
+    
+
+
+    
