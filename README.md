@@ -32,7 +32,7 @@ You will need to install pulseaudio server or pulseaudio volume control GUI. You
 The library is still in development and for now it only has 1 Task
 * PeakTask (This will calculate the peak of the left and right channels pc audio stream.)
 
-More methods will come in the furter.
+More methods will come in the future.
 
 ## Getting Started 
 
