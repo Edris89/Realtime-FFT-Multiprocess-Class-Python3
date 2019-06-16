@@ -10,7 +10,7 @@ This library taps into the pulseaudio PC audio stream to do Realtime FFT on. It 
 
 I cannot guarantee that this will not break some of your sound settings.
 The class uses pyaudio to tap into the pc audio stream.
-You will need to install pulseaudio server or pulseaudio volume control GUI. You can find more information how to install below
+You will need to install pulseaudio volume control GUI. You can find more information how to install below
 
 ## Table of Contents
 
@@ -47,16 +47,12 @@ In development:
 ### Prerequisites
 
 The program is reading the audio buffer from pulseaudio
-althoug the normal soundserver is ALSA on Ubuntu, I went for the pulseaudio for easy access to the audio stream
-
-There are 2 options to use pulseaudio
-1 is without the GUI
-1 is with a GUI
+although the normal soundserver is ALSA on Ubuntu, I went for the pulseaudio for easy access to the audio stream.
 
 **I cannot guarantee that this will not break some of your sound settings.** I am using Ubuntu 19.04 and the GUI version.
 
 
-I **recommend** to install the gui. This way you can easily change what to monitor for the audio stream.
+I **recommend** to install the gui. This way you can easily change on what to monitor for the audio stream.
 To install pulseaudio volume control gui.
 ```
 sudo apt update
@@ -81,7 +77,7 @@ cd Realtime-FFT-Multiprocess-Class-Python3
 ```
 
 Step 3: Done! 
-We can now make our own script and use the class or use the audioPeakExample.py that is provided.
+You can now configure pulseaudio volume control.
 
 ### Configuring the Pulse Audio Volume Control GUI
 
@@ -103,13 +99,13 @@ You will get something like this.
 Image 2: audioPeakExample.py in examples folder
 ![Terminal example](https://github.com/Edris89/Realtime-FFT-Multiprocess-Class-Python3/blob/master/images/audioPeakExample.png?raw=true)
 
-**Step 3:** Go back to PulseAudio Volume Control but let the script run! and you will see something like this when the example is running.
+**Step 3:** Go back to PulseAudio Volume Control but let the script **run** ! and you will see something like this (Image 3) when the example is running.
 
 Image 3: audioPeakExample.py in examples folder
 ![Pulse Audio Volume Control](https://github.com/Edris89/Realtime-FFT-Multiprocess-Class-Python3/blob/master/images/pulse_audio_volume_control.png?raw=true)
 As you can see there is now a application available. That's our script. Now click on the Monitor of Scarlett button, now in your case this may be different ! 
 
-That would look something like this.
+That will look something like this.
 
 Image 4: Monitor of your sounddriver
 ![Monitor source](https://github.com/Edris89/Realtime-FFT-Multiprocess-Class-Python3/blob/master/images/Choose%20Monitor.png?raw=true)
