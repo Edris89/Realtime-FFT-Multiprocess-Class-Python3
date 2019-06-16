@@ -19,6 +19,7 @@ You will need to install pulseaudio server or pulseaudio volume control GUI. You
   - [Methods](#methods)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
+      - [Using the Pulse Audio Volume Control GUI](#using-the-pulse-audio-volume-control-gui)
     - [Installing](#installing)
     - [Running the audioPeakExample](#running-the-audiopeakexample)
     - [Using the class in your own custom script](#using-the-class-in-your-own-custom-script)
@@ -62,10 +63,21 @@ sudo apt upgrade
 sudo apt install pulseaudio
 ```
 
-To install pulseaudio volume control.
+I recommend to install the gui. This way you can easily change what to monitor for the audio stream.
+To install pulseaudio volume control gui.
 ```
+sudo apt update
+sudo apt upgrade
 sudo apt install pavucontrol
 ```
+
+#### Using the Pulse Audio Volume Control GUI
+
+Step 1: Start the volume controll program by searching for PulseAudio in your system.
+
+You will get something like this.
+
+
 
 For more information visit the following website [Pulse Audio Ubuntu](https://linuxhint.com/pulse_audio_sounds_ubuntu/)
 
