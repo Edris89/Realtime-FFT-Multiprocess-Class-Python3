@@ -20,9 +20,9 @@ You will need to install pulseaudio server or pulseaudio volume control GUI. You
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installing](#installing)
+    - [Configuring the Pulse Audio Volume Control GUI](#configuring-the-pulse-audio-volume-control-gui)
     - [Running the audioPeakExample](#running-the-audiopeakexample)
     - [Using the class in your own custom script](#using-the-class-in-your-own-custom-script)
-  - [Using the Pulse Audio Volume Control GUI](#using-the-pulse-audio-volume-control-gui)
   - [HTTP API](#http-api)
     - [Prerequisites](#prerequisites-1)
     - [How to use basic methods](#how-to-use-basic-methods)
@@ -83,6 +83,44 @@ cd Realtime-FFT-Multiprocess-Class-Python3
 Step 3: Done! 
 We can now make our own script and use the class or use the audioPeakExample.py that is provided.
 
+### Configuring the Pulse Audio Volume Control GUI
+
+
+**Step 1:** Start the volume controll program by searching for PulseAudio in your system.
+
+You will get something like this.
+
+
+Image 1: PulseAudio Volume Control
+![Volume Control](https://github.com/Edris89/Realtime-FFT-Multiprocess-Class-Python3/blob/master/images/volume_control_recording.png?raw=true)
+
+**Step 2:** As you can see no application is recording audio. But we can change that. We start our audioPeakExample.py in the terminal by going into the **examples** folder.
+```
+python3 audioPeakExample.py
+```
+You will get something like this.
+
+Image 2: audioPeakExample.py in examples folder
+![Terminal example](https://github.com/Edris89/Realtime-FFT-Multiprocess-Class-Python3/blob/master/images/audioPeakExample.png?raw=true)
+
+**Step 3:** Go back to PulseAudio Volume Control but let the script run! and you will see something like this when the example is running.
+
+Image 3: audioPeakExample.py in examples folder
+![Pulse Audio Volume Control](https://github.com/Edris89/Realtime-FFT-Multiprocess-Class-Python3/blob/master/images/pulse_audio_volume_control.png?raw=true)
+As you can see there is now a application available. That's our script. Now click on the Monitor of Scarlett button, now in your case this may be different ! 
+
+That would look something like this.
+
+Image 4: Monitor of your sounddriver
+![Monitor source](https://github.com/Edris89/Realtime-FFT-Multiprocess-Class-Python3/blob/master/images/Choose%20Monitor.png?raw=true)
+
+You should choose only devices that start with **Monitor**. In my case this was Monitor of Scarlett Solo USB Analog Stereo and as you can see I already applied that.
+Luckily this setting has to be set only once. You can now start your script anytime and pulseaudio will automatically assign the choosen device.
+
+**Final:** Play some music and you should now see realtime changes in the terminal.
+
+For more information visit the following website [Pulse Audio Ubuntu](https://linuxhint.com/pulse_audio_sounds_ubuntu/)
+
 ### Running the audioPeakExample
 
 Step 1: Cd into examples
@@ -139,48 +177,6 @@ To print the FPS count every second use
 ```
 process = RFFT.PeakTask(frames_per_buffer=1024, debug=False, fps=True)
 ```
-
-
-## Using the Pulse Audio Volume Control GUI
-
-Before going further you must install the following
-
-
-
-**Step 1:** Start the volume controll program by searching for PulseAudio in your system.
-
-You will get something like this.
-
-
-Image 1: PulseAudio Volume Control
-![Volume Control](https://github.com/Edris89/Realtime-FFT-Multiprocess-Class-Python3/blob/master/images/volume_control_recording.png?raw=true)
-
-**Step 2:** As you can see no application is recording audio. But we can change that. We start our audioPeakExample.py in the terminal by going into the **examples** folder.
-```
-python3 audioPeakExample.py
-```
-You will get something like this.
-
-Image 2: audioPeakExample.py in examples folder
-![Terminal example](https://github.com/Edris89/Realtime-FFT-Multiprocess-Class-Python3/blob/master/images/audioPeakExample.png?raw=true)
-
-**Step 3:** Go back to PulseAudio Volume Control but let the script run! and you will see something like this when the example is running.
-
-Image 3: audioPeakExample.py in examples folder
-![Pulse Audio Volume Control](https://github.com/Edris89/Realtime-FFT-Multiprocess-Class-Python3/blob/master/images/pulse_audio_volume_control.png?raw=true)
-As you can see there is now a application available. That's our script. Now click on the Monitor of Scarlett button, now in your case this may be different ! 
-
-That would look something like this.
-
-Image 4: Monitor of your sounddriver
-![Monitor source](https://github.com/Edris89/Realtime-FFT-Multiprocess-Class-Python3/blob/master/images/Choose%20Monitor.png?raw=true)
-
-You should choose only devices that start with **Monitor**. In my case this was Monitor of Scarlett Solo USB Analog Stereo and as you can see I already applied that.
-Luckily this setting has to be set only once. You can now start your script anytime and pulseaudio will automatically assign the choosen device.
-
-**Final:** Play some music and you should now see realtime changes in the terminal.
-
-For more information visit the following website [Pulse Audio Ubuntu](https://linuxhint.com/pulse_audio_sounds_ubuntu/)
 
 
 ## HTTP API 
