@@ -60,6 +60,18 @@ sudo apt upgrade
 sudo apt install pavucontrol
 ```
 
+Library's that are used by the class. You must install the following.
+
+```
+sudo apt update
+sudo apt upgrade
+sudo apt install python3-pip 
+pip3 install wheel
+For PyAudio use sudo apt-get install python3-pyaudio
+because pip3 install PyAudio somehow seems to fail.
+pip3 install numpy
+```
+
 ### Installing
 
 Make sure you installed the prerequisites before going further.
@@ -105,7 +117,7 @@ Image 3: audioPeakExample.py in examples folder
 ![Pulse Audio Volume Control](https://github.com/Edris89/Realtime-FFT-Multiprocess-Class-Python3/blob/master/images/pulse_audio_volume_control.png?raw=true)
 As you can see there is now a application available. That's our script. Now click on the Monitor of Scarlett button, now in your case this may be different ! 
 
-That will look something like this.
+That **will** look something like this.
 
 Image 4: Monitor of your sounddriver
 ![Monitor source](https://github.com/Edris89/Realtime-FFT-Multiprocess-Class-Python3/blob/master/images/Choose%20Monitor.png?raw=true)
