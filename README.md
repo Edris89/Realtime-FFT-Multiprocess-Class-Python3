@@ -76,7 +76,8 @@ sudo apt update
 sudo apt upgrade
 sudo apt install python3-pip 
 pip3 install wheel
-pip3 install PyAudio
+For PyAudio use sudo apt-get install python3-pyaudio
+because pip3 install PyAudio somehow seems to fail.
 pip3 install numpy
 ```
 
