@@ -77,8 +77,9 @@ Step 1: Start the volume controll program by searching for PulseAudio in your sy
 
 You will get something like this.
 
+<!-- ![Volume Control](https://github.com/Edris89/Realtime-FFT-Multiprocess-Class-Python3/blob/master/images/pulse_audio_volume_control.png?raw=true) -->
 
-
+Step 2: Choose the recording tab
 For more information visit the following website [Pulse Audio Ubuntu](https://linuxhint.com/pulse_audio_sounds_ubuntu/)
 
 Library's that are used by the class. You must install the following.
