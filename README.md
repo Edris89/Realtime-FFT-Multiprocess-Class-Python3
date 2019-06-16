@@ -94,7 +94,7 @@ You can now configure pulseaudio volume control.
 ### Configuring the Pulse Audio Volume Control GUI
 
 
-**Step 1:** Start the volume controll program by searching for PulseAudio in your system.
+**Step 1:** Start the volume control program by searching for PulseAudio in your system.
 
 You will get something like this.
 
